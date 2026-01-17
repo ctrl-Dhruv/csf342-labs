@@ -2,8 +2,8 @@
 `timescale 1ns/1ps
 module tb;
   reg clk, reset;
-  reg [3:0] d;
-  wire [3:0] q;
+  reg [7:0] d;
+  wire [7:0] q;
   string vcd_file;
 
   dut DUT (.clk(clk), .reset(reset), .d(d), .q(q));
@@ -12,6 +12,7 @@ module tb;
   initial begin
     reset=0; d=4'b0000;
     #12 reset=1; d=4'b1010;
+    #12 reset=0;
     #20 $finish;
   end
   initial begin

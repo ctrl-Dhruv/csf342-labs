@@ -125,6 +125,7 @@ Implement a **positive-edge-triggered D flip-flop (DFF)**, and study reset behav
 
 ### What is provided
 - Starter code for a D flip-flop **without reset**
+- test bench for task 1 `tb_task1.v`
 
 ### What you must do
 1. Add a **synchronous _active low_ reset in task1.1**
@@ -145,13 +146,13 @@ Implement a **positive-edge-triggered D flip-flop (DFF)**, and study reset behav
 ## Task 2: Register (Structural Design)
 
 ### Objective
-Build a **multi-bit register** by **structurally composing** the D flip-flops from Task 1.
+Build an **8-register** by **structurally composing** the D flip-flops from Task 1.
 
 ### Requirements
 - Repeat the following for sync and async reset (task2.1 and 2.2 respectively)
 - Do not rewrite flip-flop logic
 - Instantiate multiple DFF modules (copy the modules from task 1 into task 2 folder and name the modules _and_ files dff)
-- Use vector signals at the top level (i.e. `input[3:0] d`, `output[3:0] q`) instead of defining individual bits.
+- Use vector signals at the top level (i.e. `input[7:0] d`, `output[7:0] q`) instead of defining individual bits.
 
 ---
 
@@ -164,6 +165,7 @@ Implement a **shift register** from scratch using **behavioral modeling** and ob
 
 ### What is provided
 - Starter code for shift register is provided in task3.1
+- Test bench file `tb_task3.v`
 
 ### What you must do
 1. Compile and run task3.1 with the appropriate test bench
@@ -180,7 +182,7 @@ Annotate the region and add at `artefacts/lab02/task3.png`
 ## Task 4: Counter 
 
 ### Objective
-Design a **simple up-counter**.
+Design a **simple 8-bit up-counter**.
 
 ### Requirements
 - Increment by 1 on every positive clock edge
