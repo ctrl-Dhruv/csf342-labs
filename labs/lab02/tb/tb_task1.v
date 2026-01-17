@@ -1,9 +1,11 @@
-
 `timescale 1ns/1ps
 module tb;
   reg clk, d, reset;
   wire q;
+  string vcd_file;
+
   dut DUT (.clk(clk), .d(d), .reset(reset), .q(q));
+  
   initial clk=0; always #5 clk=~clk;
   initial begin
     reset=0; d=0;
@@ -17,6 +19,6 @@ module tb;
       $dumpfile(vcd_file);
     else
       $dumpfile("artefacts/default.vcd");
-    $dumpvars(0,tb);
+    $dumpvars(0,DUT);
   end
 endmodule

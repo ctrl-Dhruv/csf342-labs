@@ -5,7 +5,10 @@ module tb;
   reg [1:0] op;
   reg dest;
   wire [1:0] R0, R1;
+  string vcd_file;
+
   dut DUT (.clk(clk), .reset(reset), .op(op), .dest(dest), .R0(R0), .R1(R1));
+  
   initial clk=0; always #5 clk=~clk;
   initial begin
     reset=1; op=2'b00; dest=0;

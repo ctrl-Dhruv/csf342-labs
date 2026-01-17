@@ -3,7 +3,10 @@
 module tb;
   reg clk, reset, serial_in;
   wire [3:0] q;
+  string vcd_file;
+
   dut DUT (.clk(clk), .reset(reset), .serial_in(serial_in), .q(q));
+  
   initial clk=0; always #5 clk=~clk;
   initial begin
     reset=0; serial_in=0;
