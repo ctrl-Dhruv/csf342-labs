@@ -1,7 +1,7 @@
 module tb;
   reg [3:0]a;
   reg [3:0]b;
-  reg cin,m;
+  reg m;
   wire [3:0]sum;
   wire cout;
   string vcd_file;
