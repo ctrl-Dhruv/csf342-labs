@@ -205,14 +205,14 @@ For **each instruction**, fill the table below:
 
 | Field |  Value | | | |
 |------|-------|------|-------|------|
-| Instruction | add | addi | beq | jal |
-| Instruction format (R/I/B/J) | | | | |
-| Opcode | | | | |
-| rs1 | | | | |
-| rs2 | | | | |
-| rd | | | | |
-| Immediate (binary, sign-extended) | | | | |
-| Final 32-bit encoding (hex) | | | | |
+| Instruction | add x7,x5,x6 | addi x6,x6,-4 | beq x5,x0,label | jal x1,label |
+| Instruction format (R/I/B/J) |R |I |B |J |
+| Opcode |0110011 |0010011 |1100011 |1101111 |
+| rs1 |00101 (x5) |00110 (x6) |00101 (x5) |- |
+| rs2 |00110 (x6) |- |00000 (x0) |- |
+| rd |00111 (x7) |00110 (x6) |- |00001 (x1) |
+| Immediate (binary, sign-extended) |- |111111111100 (−4) |0000000010000 (+16) |000000000000000010000 (+16) |
+| Final 32-bit encoding (hex) |0x006283B3 |0xFFC30313 |0x00028863 |0x010000EF |
 
 Verify each encoding using the simulator assembler.
 
