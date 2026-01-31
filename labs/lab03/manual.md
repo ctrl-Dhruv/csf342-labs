@@ -110,7 +110,11 @@ addi x6, x0, 3
 - Modifies it using **at least three immediate type arithmetic instructions**
 - Includes **at least one negative immediate**
    ```
-   <your program here>
+   <addi x5, x0, 10
+   
+   addi x5, x5, 5
+   addi x5, x5, -3
+   addi x5, x5, 8>
 
    ```
 
@@ -122,10 +126,10 @@ addi x6, x0, 3
 
 | Step | Instruction | Immediate (decimal) | Immediate (binary)         | Register Value After Execution |
 |------|------------|---------------------|-----------------------------|--------------------------------|
-| Init |            |                     |                             |                                |
-| 1    |            |                     |                             |                                |
-| 2    |            |                     |                             |                                |
-| 3    |            |                     |                             |                                |
+| Init |   addi x5, x0, 10         |        10             |        000000001010                     |          10                      |
+| 1    |   addi x5, x5, 5         |          5           |            000000000101                 |                15                |
+| 2    |   addi x5, x5, -3         |         -3            |          111111111101                   |              12                  |
+| 3    |   addi x5, x5, 8         |           8          |      000000001000                       |            20                    |
 
 
 
