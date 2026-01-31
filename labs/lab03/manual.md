@@ -158,7 +158,18 @@ Write a program that:
 
 ---
 ```
-<your program here>
+<        addi x5, x0, 10     # counter = 10
+        addi x6, x0, 0      # iteration count = 0
+
+loop:
+        beq  x5, x0, exit   # if counter == 0, exit loop
+        addi x5, x5, -1     # counter--
+        addi x6, x6, 1      # iterations++
+        jal  x0, loop       # jump back to loop
+
+exit:
+        addi x7, x6, 0      # store iteration count in x7
+>
 
 ```
 
@@ -168,8 +179,8 @@ For **one conditional branch** and **one jump**, fill the table __*before steppi
 
 | Instruction | PC (hex) | Immediate | Predicted Next PC | Actual Next PC |
 |------------|----------|-----------|-------------------|----------------|
-|   .|   |   |   |   |
-|   .|   |   |   |   |
+|   beq x5, x0, exit| 0x00000008  |  +16 | 0x0000000C  | 0x0000000C  |
+|   jal x0, loop| 0x00000014  | −12  | 0x00000008  | 0x00000008  |
 |   .|   |   |   |   |
 
 ---
