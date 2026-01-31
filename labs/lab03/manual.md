@@ -72,16 +72,18 @@ Become fluent with basic RISC-V assembly instructions and understand **register-
 
 **Write an assembly program that:**
 
-- Loads two constants into registers
+- Loads two constants into registers:
+- addi x5, x0, 5      
+addi x6, x0, 3     
 - Performs:
   - addition  
      ```
-     <fill in your program here>
+     <add  x7, x5, x6     >
 
      ```
   - bitwise AND  
      ```
-     <your program here>
+     <and  x7, x5, x6     >
 
      ```
 
@@ -95,8 +97,8 @@ Become fluent with basic RISC-V assembly instructions and understand **register-
 
 | Instruction | Destination Register | Value Written |
 |------------|----------------------|---------------|
-| add        |                      |               |
-| and        |                      |               |
+| add        |         x7             |       8        |
+| and        |           x7           |        1       |
 
 ---
 
